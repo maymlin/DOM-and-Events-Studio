@@ -61,8 +61,12 @@ window.addEventListener("load", event => {
     let rocketPosition = 0;
 
     rightButton.addEventListener("click", event => {
-        shuttleBackground.style.background = "black";
         rocketPosition += 10;
+        rocket.style.left = rocketPosition + "px";
+    });
+
+    leftButton.addEventListener("click", event => {
+        rocketPosition -= 10;
         rocket.style.left = rocketPosition + "px";
     });
 
