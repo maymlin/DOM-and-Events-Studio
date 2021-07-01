@@ -16,7 +16,7 @@ window.addEventListener("load", event => {
     let downButton = document.getElementById("downButton");
     let rightButton = document.getElementById("rightButton");
     let leftButton = document.getElementById("leftButton");
-
+    
     takeOffButton.addEventListener("click", event => {
         let takeOffConfirmation = window.confirm("Confirm that the shuttle is ready for takeoff.");
 
@@ -58,8 +58,12 @@ window.addEventListener("load", event => {
         spaceShuttleHeight.innerText = shuttleHeight;
     });
 
-    rightButton.addEventListener("click", event => {
+    let rocketPosition = 0;
 
+    rightButton.addEventListener("click", event => {
+        shuttleBackground.style.background = "black";
+        rocketPosition += 10;
+        rocket.style.left = rocketPosition + "px";
     });
 
 });
