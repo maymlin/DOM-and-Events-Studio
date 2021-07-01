@@ -22,6 +22,10 @@ window.addEventListener("load", event => {
 
     landingButton.addEventListener("click", event => {
         window.alert("The shuttle is landing. Landing gear engaged.");
+        flightStatus.innerText = "The shuttle has landed.";
+        shuttleBackground.style.background = "green";
+        shuttleHeight = 0;
+        spaceShuttleHeight.innerText = shuttleHeight;
     });
 
 });
