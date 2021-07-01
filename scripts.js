@@ -33,6 +33,7 @@ window.addEventListener("load", event => {
         shuttleBackground.style.background = "green";
         shuttleHeight = 0;
         spaceShuttleHeight.innerText = shuttleHeight;
+        returnRocketToOrigin();
     });
 
     missionAbortButton.addEventListener("click", event => {
@@ -43,6 +44,7 @@ window.addEventListener("load", event => {
             shuttleBackground.style.background = "green";
             shuttleHeight = 0;
             spaceShuttleHeight.innerText = shuttleHeight;
+            returnRocketToOrigin();
         }
     });
 
@@ -70,4 +72,8 @@ window.addEventListener("load", event => {
         rocket.style.left = rocketPosition + "px";
     });
 
+    function returnRocketToOrigin() {
+        rocketPosition = 0;
+        rocket.style.left = rocketPosition + "px";
+    }
 });
